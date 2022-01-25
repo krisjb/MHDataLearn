@@ -1,6 +1,6 @@
 import unittest
 
-from preprocessing.load import ------functions inside load--------
+from MHDataLearn.preprocessing.load import load_data
 
 
 class TestClean(unittest.TestCase):

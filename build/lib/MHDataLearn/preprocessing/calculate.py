@@ -167,7 +167,8 @@ def los_current(df):
 def postcode_to_lsoa(df):
     """
     Looks up Lower Layer Super Output Areas (LSOA)
-    from UK postcode and adds 'lsoa' column to dataframe
+    from UK postcode and adds this column to dataframe
+    WARNING: CSV file used is 766MB so this may take time
     
     Parameters
     ----------
@@ -177,11 +178,18 @@ def postcode_to_lsoa(df):
     -------
     df : main dataset
     """
-    lsoa = pd.read_csv('/work/postcode_lsoa.csv', encoding = "ISO-8859-1")
-    lsoa_dict = dict(zip(lsoa.pcd7, lsoa.lsoa11cd))
-    lsoa_dict
-    df['lsoa'] = df['Postcode'].map(lsoa_dict)
+    url = 'https://opendata.camden.gov.uk/api/views/tr8t-gqz7/rows.csv?'\
+        'accessType=DOWNLOAD&bom=true&format=true'
+    
+    lsoa = pd.read_csv(url)
+    lsoa.rename(columns={'Postcode 3' : 'Postcode'}, inplace=True)
+    lsoa.drop(lsoa.columns.difference(['Postcode',
+                                       'Lower Super Output Area Code']),
+              1, inplace=True)
+    
+    df = pd.merge(df, lsoa, on = 'Postcode', how = 'left')
     return df
+
     
 
 def lsoa_to_imd(df):

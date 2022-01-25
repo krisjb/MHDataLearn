@@ -1,6 +1,6 @@
 import unittest
 
-from modelselector.model_selecter import split_data, reveal_best_classification_model
+from MHDataLearn.modelselector.model_selector import split_data, reveal_best_classification_model
 
 
 class TestModelSelecter(unittest.TestCase):

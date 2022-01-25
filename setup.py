@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 setup(
 
     name = "MHDataLearn",
-    version = "1.0.28",
+    version = "1.0.42",
     descriptions = "",
     packages=find_packages(include=["MHDataLearn", "MHDataLearn.*"]),
 

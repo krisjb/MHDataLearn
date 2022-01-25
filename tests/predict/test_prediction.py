@@ -1,6 +1,6 @@
 import unittest
 
-from predict.prediction import create_prediction
+from MHDataLearn.predict.prediction import create_prediction
 
 
 class TestPrediction(unittest.TestCase):

@@ -1,6 +1,12 @@
 import unittest
+import pandas as pd
+import numpy as np
+from MHDataLearn.preprocessing.clean import age_check,\
+                                            marital_replace,\
+                                            accom_replace,\
+                                            employ_replace
+                                            
 
-from preprocessing.clean import ------functions inside clean--------
 
 
 class TestClean(unittest.TestCase):
@@ -8,12 +14,6 @@ class TestClean(unittest.TestCase):
     This class provides test for all the functions inside the clean module.
 
     """
-    def test_calc_age_admit(self):
-        """
-        This is a test for the function calc_age_admit
-        """
-        type = df['age_admit'].dtype
-        self.assertEqual(type, "float64")
 
     def test_age_check1(self):
         """

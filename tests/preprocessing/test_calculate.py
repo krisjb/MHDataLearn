@@ -1,13 +1,26 @@
 import unittest
-
-from preprocessing.calculate import ------functions inside calculate--------
+import pandas as pd
+import numpy as np
+from MHDataLearn.preprocessing.calculate import calc_age_admit,\
+                                                check_emergency,\
+                                                emergency_readmit,\
+                                                postcode_to_lsoa,\
+                                                lsoa_to_imd
 
 class TestCalculate(unittest.TestCase):
     """
     This class will proivdes all the test for the calculate module.
 
     """
-    def test_calc_age_admit(self):
+    def test_calc_age_admit1(self):
+        """
+        This is a test for the function calc_age_admit
+        """
+        type = df['age_admit'].dtype
+        self.assertEqual(type, "float64")
+    
+    
+    def test_calc_age_admit2(self):
         """
         This is a test for the function calc_age_admit
         """

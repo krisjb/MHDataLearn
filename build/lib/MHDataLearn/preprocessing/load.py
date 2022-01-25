@@ -8,8 +8,10 @@ the package
 import pandas as pd
 import numpy as np
 
+url = "https://raw.githubusercontent.com/krisjb/MHDataLearn/main/Data/"\
+        "DummyData.csv"
 
-def load_data(filepath="/dummy_data.csv"):
+def load_data(filepath=url):
     """
     Loads local data file as dataframe from specified filepath
     If no filepath specified, loads dummy dataset from web
@@ -21,7 +23,9 @@ def load_data(filepath="/dummy_data.csv"):
     Returns
     -------
     df : DataFrame
-
     """
+    
     df = pd.read_csv(filepath)
     return df
+
+load_data()

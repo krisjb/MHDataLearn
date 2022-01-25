@@ -12,7 +12,8 @@ from MHDataLearn.preprocessing.clean import (data_types,
                                              gender_replace,
                                              marital_replace,
                                              accom_replace, 
-                                             employ_replace
+                                             employ_replace,
+                                             mhclass_replace
                                              )
 from MHDataLearn.preprocessing.calculate import (calc_age_admit, 
                                                  check_emergency,
@@ -56,6 +57,7 @@ def wrangle_data(df_temp, test= "training", imd=False):
     """
     df = df_temp.copy()
     df = data_types(df)
+    df = mhclass_replace(df)
     df = gender_replace(df)
     df = marital_replace(df)
     df = accom_replace(df)
