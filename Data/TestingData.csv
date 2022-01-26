@@ -1,3 +1,0 @@
-LocalPatientId,PersonBirthDate,Gender,EthnicCategory,Postcode,MHCareClusterSuperClass,AdmMethCodeHospProvSpell,PlannedDischDestCode,StartDateHospProvSpell,DischDateHospProvSpell,MaritalStatus,EmployStatus,SettledAccommodationInd,HospitalBedTypeMH
-25,24/02/1971,1,A,CO10 7TH,B,99,37,07/03/2018,29/03/2018,N,4,N,10
-50,25/09/1973,2,A,B50 4LJ,B,2D,88,09/05/2019,12/05/2019,N,5,N,14

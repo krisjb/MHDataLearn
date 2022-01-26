@@ -8,4 +8,4 @@ new, preprocessed MHSDS data to identify people at high
 risk of readmission.
 """
 
-from MHDataLearn import preprocessing, modelselector, predict
+from MHDataLearn import preprocessing, modelselector

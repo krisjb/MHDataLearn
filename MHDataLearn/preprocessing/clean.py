@@ -28,8 +28,10 @@ def data_types(df):
 
     """
     df['PersonBirthDate'] = pd.to_datetime(df['PersonBirthDate'])
-    df['StartDateHospProvSpell'] = pd.to_datetime(df['StartDateHospProvSpell'])
-    df['DischDateHospProvSpell'] = pd.to_datetime(df['DischDateHospProvSpell'])
+    df['StartDateHospProvSpell'] = pd.to_datetime(df['StartDateHospProvSpell'],
+                                                  dayfirst=True)
+    df['DischDateHospProvSpell'] = pd.to_datetime(df['DischDateHospProvSpell'],
+                                                  dayfirst=True)
     return df
 
 
