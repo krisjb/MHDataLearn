@@ -3,7 +3,7 @@ setup(
     author="Kris Bennett, Samuel Nyeko, Kuang Myat wai yan Yan"\
         "Simon Wellesley Miller",
     name = "MHDataLearn",
-    version = "1.1.21",
+    version = "1.1.22",
     description = "A package to preprocess raw Mental Health Services Data "\
         "Sets (MHSDS), apply classification machine learning algorithms"\
             "and select the best performing using algorithm metrics",
