@@ -13,7 +13,8 @@ setup(
         'pandas>=1.0.0',
         'matplotlib>=3.2.0',
         'seaborn>=0.9.1',
-        'scikit-learn>=0.22.1'
+        'scikit-learn>=0.22.1',
+	'pytest>=6.0.0'
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
